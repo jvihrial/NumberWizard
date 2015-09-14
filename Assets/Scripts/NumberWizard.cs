@@ -27,9 +27,7 @@ public class NumberWizard : MonoBehaviour {
 		
 		print ("Highest number you can enter is " + max );
 		print ("..and lowest nuber is " + min );
-		
-		max = max + 1;
-		
+				
 		print ("Is your number greater or lower than " + guess + " ?");
 		print ("Press up arrow for higher, down for lower and enter for equal");
 	}
@@ -46,11 +44,11 @@ public class NumberWizard : MonoBehaviour {
 			
 		if (Input.GetKeyDown( KeyCode.UpArrow)) {
 			//print ("Up arrow pressed");
-			min = guess;
+			min = guess + 1;
 			NextGuess();
 		} else if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			//print ("Down arrow pressed");
-			max = guess;
+			max = guess - 1;
 			NextGuess();
 		} else if (Input.GetKeyDown (KeyCode.Return)) {
 			print ("Enter key pressed (I won ;) !)");
